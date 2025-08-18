@@ -1,0 +1,1035 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <!-- optional but nice on Android’s address bar color -->
+    <meta name="theme-color" content="#0b0b0b">
+    <title>Uriburu 1000 – Boating, San Isidro, Buenos Aires</title>
+    <meta name="description"
+        content="Uriburu 1000 – 5 bedrooms, 6 bathrooms, 1,250 m² total area in San Isidro. Schedule a visit.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta property="og:title" content="Uriburu 1000 – Boating, San Isidro, Buenos Aires">
+    <meta property="og:description" content="Luxury property with 5 bedrooms, 6 bathrooms and 1,250 m² total area.">
+    <meta property="og:image"
+        content="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169640.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --font-heading: 'Playfair Display', ui-serif, Georgia, serif;
+            --font-body: 'Inter', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .font-heading {
+            font-family: var(--font-heading);
+        }
+
+        .font-body {
+            font-family: var(--font-body);
+        }
+    </style>
+</head>
+
+<body class="font-body bg-neutral-950 text-white antialiased min-h-screen flex flex-col">
+
+    <!-- ONE responsive navbar (desktop + mobile, non-blocking scroll) -->
+    <nav id="mainNav" class="sticky top-0 z-50 transition-colors duration-300
+             bg-[rgba(12,12,12,0.22)] supports-[backdrop-filter]:bg-[rgba(12,12,12,0.14)]
+             backdrop-blur-md backdrop-saturate-150 backdrop-brightness-95">
+
+        <!-- Top bar -->
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-12 h-14">
+            <a href="#" class="tracking-[0.18em] text-[13px] md:text-sm font-semibold text-white">RODRIGO
+                JORDAN</a>
+
+            <!-- Desktop links -->
+            <div class="hidden md:flex items-center gap-10 text-xs font-medium tracking-[0.15em] uppercase">
+                <a href="#listings"
+                    class="navlink relative text-white/80 hover:text-white transition after:absolute after:-bottom-1 after:left-0 after:h-[1.5px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">BUY</a>
+                <a href="#areas"
+                    class="navlink relative text-white/80 hover:text-white transition after:absolute after:-bottom-1 after:left-0 after:h-[1.5px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">RENT</a>
+                <a href="#lifestyle"
+                    class="navlink relative text-white/80 hover:text-white transition after:absolute after:-bottom-1 after:left-0 after:h-[1.5px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">ABOUT
+                    US</a>
+                <a href="#inspiration"
+                    class="navlink relative text-white/80 hover:text-white transition after:absolute after:-bottom-1 after:left-0 after:h-[1.5px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">PROPERTY
+                    VALUATION</a>
+            </div>
+
+            <!-- Mobile toggle -->
+            <button id="navToggle" class="md:hidden text-white/90 p-2" aria-expanded="false" aria-controls="navLinks"
+                aria-label="Toggle menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- SAME links container for mobile (accordion that pushes content) -->
+        <div id="navLinks" class="md:hidden overflow-hidden max-h-0 transition-[max-height] duration-300 ease-out
+         border-t border-white/10
+         bg-transparent backdrop-blur-0 backdrop-brightness-100 backdrop-saturate-100">
+            <div
+                class="max-w-7xl mx-auto px-6 lg:px-12 py-3 flex flex-col gap-3 text-[13px] font-medium tracking-[0.14em] uppercase">
+                <a class="block text-white/90 hover:text-white navlink" href="#listings">BUY</a>
+                <a class="block text-white/90 hover:text-white navlink" href="#areas">RENT</a>
+                <a class="block text-white/90 hover:text-white navlink" href="#lifestyle">ABOUT US</a>
+                <a class="block text-white/90 hover:text-white navlink" href="#inspiration">PROPERTY VALUATION</a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        // Mobile accordion toggle (no scroll lock, no auto-close on outside taps)
+        (function () {
+            const btn = document.getElementById('navToggle');
+            const panel = document.getElementById('navLinks');
+
+            function setOpen(open) {
+                btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                panel.style.maxHeight = open ? panel.scrollHeight + 'px' : '0px';
+            }
+
+            btn?.addEventListener('click', () => {
+                const open = panel.style.maxHeight && panel.style.maxHeight !== '0px';
+                setOpen(!open);
+            });
+
+            // Close after clicking a link (optional)
+            panel.querySelectorAll('a.navlink').forEach(a => a.addEventListener('click', () => setOpen(false)));
+
+            // Ensure closed on load
+            setOpen(false);
+        })();
+
+        // Keep nav light on scroll (just a tiny change, no dark overlay)
+        (function () {
+            const nav = document.getElementById('mainNav');
+            const add = ['bg-[rgba(12,12,12,0.28)]', 'supports-[backdrop-filter]:bg-[rgba(12,12,12,0.18)]', 'border-white/10'];
+            const remove = ['bg-[rgba(12,12,12,0.22)]', 'supports-[backdrop-filter]:bg-[rgba(12,12,12,0.14)]', 'border-white/10'];
+
+            function onScroll() {
+                if (window.scrollY > 10) nav.classList.add(...add);
+                else nav.classList.remove(...add);
+            }
+            onScroll();
+            window.addEventListener('scroll', onScroll, { passive: true });
+        })();
+
+        // Active section underline + color
+        (function () {
+            const links = Array.from(document.querySelectorAll('a.navlink[href^="#"]'));
+            const sections = links.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    const id = '#' + entry.target.id;
+                    const link = links.find(a => a.getAttribute('href') === id);
+                    if (!link) return;
+                    if (entry.isIntersecting) { link.classList.add('text-white', 'after:w-full'); link.classList.remove('text-white/80'); }
+                    else { link.classList.remove('text-white', 'after:w-full'); link.classList.add('text-white/80'); }
+                });
+            }, { rootMargin: '-30% 0px -60% 0px' });
+            sections.forEach(sec => io.observe(sec));
+        })();
+    </script>
+
+    <!-- HERO -->
+    <header class="relative h-screen flex items-end">
+        <div class="absolute inset-0 bg-cover bg-center"
+            style="background-image:url('https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169640.jpg');"
+            aria-hidden="true"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/35 to-black/0"></div>
+
+        <div class="relative z-10 w-full px-6 lg:px-12 pb-10 lg:pb-16">
+            <div class="max-w-6xl mx-auto text-center">
+                <p class="uppercase tracking-[0.35em] text-[11px] md:text-xs text-white/80 mb-3">Fine Real Estate</p>
+                <h1 class="font-heading text-4xl sm:text-6xl lg:text-7xl leading-tight">Uriburu 1000</h1>
+                <p class="mt-3 text-white/90">Boating, San Isidro, Buenos Aires</p>
+
+                <div class="mt-8 flex flex-wrap justify-center gap-3">
+                    <a href="https://wa.me/5491112345678?text=I'd%20like%20to%20schedule%20an%20appointment%20to%20Rodrigo%20Jordan"
+                        class="inline-flex items-center justify-center rounded-full px-7 py-3 text-sm font-medium bg-white text-neutral-900 hover:bg-neutral-200 transition"
+                        target="_blank">
+                        Schedule a Visit</a>
+                    <a href="#gallery"
+                        class="inline-flex items-center justify-center rounded-full px-7 py-3 text-sm font-medium border border-white/25 bg-white/10 hover:bg-white/15 transition">
+                        View Gallery — 50 Photos</a>
+                    <!-- New Video Button -->
+                    <button onclick="openVideo()"
+                        class="inline-flex items-center justify-center rounded-full px-7 py-3 text-sm font-medium border border-white/25 bg-white/10 hover:bg-white/15 transition">
+                        ▶ Watch Video Tour
+                    </button>
+                </div>
+
+                <div class="mt-10 flex flex-wrap justify-center gap-5 text-sm text-white/90">
+                    <a class="hover:opacity-100 opacity-90" href="#gallery">Gallery</a>
+                    <a class="hover:opacity-100 opacity-90" href="#map">Map</a>
+                    <a class="hover:opacity-100 opacity-90" href="#details">Property Details</a>
+                    <a class="hover:opacity-100 opacity-90" href="#overview">Overview</a>
+                    <a class="hover:opacity-100 opacity-90" href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50" role="dialog"
+        aria-modal="true" aria-labelledby="videoTitle">
+        <div class="relative w-full max-w-4xl aspect-video">
+            <iframe id="videoFrame" class="w-full h-full rounded-lg" src="" title="Property Video Tour" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <button onclick="closeVideo()" class="absolute -top-12 right-0 text-white text-2xl">✕</button>
+        </div>
+    </div>
+
+    <script>
+        const videoModal = document.getElementById('videoModal');
+        const videoFrame = document.getElementById('videoFrame');
+        const videoBtn = document.querySelector('button[onclick="openVideo()"]');
+
+        function openVideo() {
+            videoModal.classList.remove('hidden');
+            videoModal.classList.add('flex');
+            const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const base = 'https://www.youtube.com/embed/ScMzIvxBSi4';
+            videoFrame.src = prefersReduced ? base : base + '?autoplay=1';
+            setTimeout(() => videoModal.querySelector('button').focus(), 0);
+        }
+        function closeVideo() {
+            videoModal.classList.add('hidden');
+            videoModal.classList.remove('flex');
+            videoFrame.src = '';
+            videoBtn?.focus();
+        }
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !videoModal.classList.contains('hidden')) closeVideo();
+        });
+    </script>
+
+    <!-- Content sections -->
+    <main class="bg-white text-neutral-900 flex-grow">
+
+        <!-- Gallery (responsive grid + featured tile + lightbox) -->
+        <section id="gallery" class="max-w-6xl mx-auto px-6 lg:px-12 py-16 border-t">
+            <h2 class="font-heading text-2xl mb-6">Gallery</h2>
+
+            <!-- Grid -->
+            <!-- GALLERY GRID (first = featured) -->
+            <div id="galleryGrid"
+                class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 auto-rows-[8rem] md:auto-rows-[9.5rem] lg:auto-rows-[11rem]">
+
+                <!-- Featured -->
+                <button
+                    class="group relative col-span-2 row-span-2 overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169640.jpg?isFirstImage=true"
+                    data-index="0" aria-label="Open photo 1">
+                    <img src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169640.jpg?isFirstImage=true"
+                        alt="Featured photo"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="eager" fetchpriority="high" decoding="auto">
+                    <div
+                        class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition">
+                    </div>
+                    <span
+                        class="pointer-events-none absolute bottom-3 left-3 text-[11px] font-medium px-2 py-1 rounded-full bg-black/50 text-white inline-flex items-center gap-1.5">50<i
+                            data-lucide="camera" class="w-3.5 h-3.5 text-white/90" aria-hidden="true"></i></span>
+                </button>
+
+                <script src="https://unpkg.com/lucide@latest"></script>
+                <script>
+                    // ensure all icons on the page (including gallery) are present first
+                    window.addEventListener('load', () => lucide.createIcons());
+                    // If you already called it earlier, calling again is safe.
+                </script>
+
+                <!-- Regular tiles -->
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169687.jpg"
+                    data-index="1" aria-label="Open photo 2">
+                    <img src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169687.jpg"
+                        alt="Gallery photo 2"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async">
+
+                </button>
+
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169683.jpg"
+                    data-index="2" aria-label="Open photo 3">
+                    <img src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169683.jpg"
+                        alt="Gallery photo 3"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async">
+
+                </button>
+
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169641.jpg"
+                    data-index="3" aria-label="Open photo 4">
+                    <img src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169641.jpg"
+                        alt="Gallery photo 4"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async">
+
+                </button>
+
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169678.jpg"
+                    data-index="4" aria-label="Open photo 5">
+                    <img src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169678.jpg"
+                        alt="Gallery photo 5"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async">
+
+                </button>
+
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169661.jpg"
+                    data-index="5" aria-label="Open photo 6">
+                    <img src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169661.jpg"
+                        alt="Gallery photo 6"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async">
+
+                </button>
+
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169654.jpg"
+                    data-index="6" aria-label="Open photo 7">
+                    <img src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169654.jpg"
+                        alt="Gallery photo 7"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async">
+
+                </button>
+
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169671.jpg"
+                    data-index="7" aria-label="Open photo 8">
+                    <img src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169671.jpg"
+                        alt="Gallery photo 8"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async">
+
+                </button>
+
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169659.jpg"
+                    data-index="8" aria-label="Open photo 9">
+                    <img src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169659.jpg"
+                        alt="Gallery photo 9"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async">
+
+                </button>
+
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169645.jpg"
+                    data-index="9" aria-label="Open photo 10">
+                    <img src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169645.jpg"
+                        alt="Gallery photo 10"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async">
+
+                </button>
+
+                <!-- keep going in order… -->
+
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169670.jpg"
+                    data-index="10" aria-label="Open photo 11">
+                    <img src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169670.jpg"
+                        alt="Gallery photo 11"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async">
+
+                </button>
+
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169664.jpg"
+                    data-index="11" aria-label="Open photo 12">
+                    <img src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169664.jpg"
+                        alt="Gallery photo 12"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async">
+
+                </button>
+
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169665.jpg"
+                    data-index="12" aria-label="Open photo 13">
+                    <img src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169665.jpg"
+                        alt="Gallery photo 13"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async">
+
+                </button>
+
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169679.jpg"
+                    data-index="13" aria-label="Open photo 14">
+                    <img src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169679.jpg"
+                        alt="Gallery photo 14"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async">
+
+                </button>
+
+                <!-- …repeat for all remaining images in this exact order … -->
+
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169655.jpg"
+                    data-index="14" aria-label="Open photo 15"><img
+                        src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169655.jpg"
+                        alt="Gallery photo 15"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async"></button>
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169643.jpg"
+                    data-index="15" aria-label="Open photo 16"><img
+                        src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169643.jpg"
+                        alt="Gallery photo 16"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async"></button>
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169656.jpg"
+                    data-index="16" aria-label="Open photo 17"><img
+                        src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169656.jpg"
+                        alt="Gallery photo 17"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async"></button>
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169644.jpg"
+                    data-index="17" aria-label="Open photo 18"><img
+                        src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169644.jpg"
+                        alt="Gallery photo 18"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async"></button>
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169650.jpg"
+                    data-index="18" aria-label="Open photo 19"><img
+                        src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169650.jpg"
+                        alt="Gallery photo 19"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async"></button>
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169668.jpg"
+                    data-index="19" aria-label="Open photo 20"><img
+                        src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169668.jpg"
+                        alt="Gallery photo 20"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async"></button>
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169686.jpg"
+                    data-index="20" aria-label="Open photo 21"><img
+                        src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169686.jpg"
+                        alt="Gallery photo 21"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async"></button>
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169647.jpg"
+                    data-index="21" aria-label="Open photo 22"><img
+                        src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169647.jpg"
+                        alt="Gallery photo 22"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async"></button>
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169658.jpg"
+                    data-index="22" aria-label="Open photo 23"><img
+                        src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169658.jpg"
+                        alt="Gallery photo 23"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async"></button>
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169675.jpg"
+                    data-index="23" aria-label="Open photo 24"><img
+                        src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169675.jpg"
+                        alt="Gallery photo 24"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async"></button>
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169681.jpg"
+                    data-index="24" aria-label="Open photo 25"><img
+                        src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169681.jpg"
+                        alt="Gallery photo 25"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async"></button>
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169657.jpg"
+                    data-index="25" aria-label="Open photo 26"><img
+                        src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169657.jpg"
+                        alt="Gallery photo 26"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async"></button>
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169648.jpg"
+                    data-index="26" aria-label="Open photo 27"><img
+                        src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169648.jpg"
+                        alt="Gallery photo 27"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async"></button>
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169639.jpg"
+                    data-index="27" aria-label="Open photo 28"><img
+                        src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169639.jpg"
+                        alt="Gallery photo 28"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async"></button>
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169637.jpg"
+                    data-index="28" aria-label="Open photo 29"><img
+                        src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169637.jpg"
+                        alt="Gallery photo 29"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async"></button>
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169666.jpg"
+                    data-index="29" aria-label="Open photo 30"><img
+                        src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169666.jpg"
+                        alt="Gallery photo 30"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async"></button>
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169652.jpg"
+                    data-index="30" aria-label="Open photo 31"><img
+                        src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169652.jpg"
+                        alt="Gallery photo 31"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async"></button>
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169651.jpg"
+                    data-index="31" aria-label="Open photo 32"><img
+                        src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169651.jpg"
+                        alt="Gallery photo 32"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async"></button>
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169635.jpg"
+                    data-index="32" aria-label="Open photo 33"><img
+                        src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169635.jpg"
+                        alt="Gallery photo 33"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async"></button>
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169676.jpg"
+                    data-index="33" aria-label="Open photo 34"><img
+                        src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169676.jpg"
+                        alt="Gallery photo 34"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async"></button>
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169649.jpg"
+                    data-index="34" aria-label="Open photo 35"><img
+                        src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169649.jpg"
+                        alt="Gallery photo 35"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async"></button>
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169684.jpg"
+                    data-index="35" aria-label="Open photo 36"><img
+                        src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169684.jpg"
+                        alt="Gallery photo 36"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async"></button>
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169646.jpg"
+                    data-index="36" aria-label="Open photo 37"><img
+                        src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169646.jpg"
+                        alt="Gallery photo 37"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async"></button>
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990178570.jpg"
+                    data-index="37" aria-label="Open photo 38"><img
+                        src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990178570.jpg"
+                        alt="Gallery photo 38"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async"></button>
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990179065.jpg"
+                    data-index="38" aria-label="Open photo 39"><img
+                        src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990179065.jpg"
+                        alt="Gallery photo 39"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async"></button>
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990179066.jpg"
+                    data-index="39" aria-label="Open photo 40"><img
+                        src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990179066.jpg"
+                        alt="Gallery photo 40"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async"></button>
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990659414.jpg"
+                    data-index="40" aria-label="Open photo 41"><img
+                        src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990659414.jpg"
+                        alt="Gallery photo 41"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async"></button>
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990659416.jpg"
+                    data-index="41" aria-label="Open photo 42"><img
+                        src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990659416.jpg"
+                        alt="Gallery photo 42"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async"></button>
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990656181.jpg"
+                    data-index="42" aria-label="Open photo 43"><img
+                        src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990656181.jpg"
+                        alt="Gallery photo 43"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async"></button>
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990656180.jpg"
+                    data-index="43" aria-label="Open photo 44"><img
+                        src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990656180.jpg"
+                        alt="Gallery photo 44"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async"></button>
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990656706.jpg"
+                    data-index="44" aria-label="Open photo 45"><img
+                        src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990656706.jpg"
+                        alt="Gallery photo 45"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async"></button>
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990656718.jpg"
+                    data-index="45" aria-label="Open photo 46"><img
+                        src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990656718.jpg"
+                        alt="Gallery photo 46"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async"></button>
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990657488.jpg"
+                    data-index="46" aria-label="Open photo 47"><img
+                        src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990657488.jpg"
+                        alt="Gallery photo 47"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async"></button>
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990659418.jpg"
+                    data-index="47" aria-label="Open photo 48"><img
+                        src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990659418.jpg"
+                        alt="Gallery photo 48"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async"></button>
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990656785.jpg"
+                    data-index="48" aria-label="Open photo 49"><img
+                        src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990656785.jpg"
+                        alt="Gallery photo 49"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async"></button>
+                <button
+                    class="group relative overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-white/60"
+                    data-full="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1991536559.jpg"
+                    data-index="49" aria-label="Open photo 50"><img
+                        src="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1991536559.jpg"
+                        alt="Gallery photo 50"
+                        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy" decoding="async"></button>
+
+            </div>
+
+            <!-- Hide every tile except indexes 0–4 (still present for JS/lightbox) -->
+            <style>
+                #galleryGrid [data-index]:not([data-index="0"]):not([data-index="1"]):not([data-index="2"]):not([data-index="3"]):not([data-index="4"]) {
+                    display: none;
+                }
+            </style>
+
+            <!-- Lightbox -->
+            <div id="lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 p-4">
+                <button id="lbClose" class="absolute top-4 right-4 text-white/90 hover:text-white text-2xl"
+                    aria-label="Close">✕</button>
+                <button id="lbPrev"
+                    class="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 text-white/90 hover:text-white text-3xl"
+                    aria-label="Previous">‹</button>
+                <button id="lbNext"
+                    class="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 text-white/90 hover:text-white text-3xl"
+                    aria-label="Next">›</button>
+                <img id="lbImg" src="" alt="Full-size image"
+                    class="max-h-[85vh] max-w-[92vw] rounded-lg shadow-2xl object-contain">
+            </div>
+
+            <!-- Lightbox script (no deps) -->
+            <script>
+                (function () {
+                    const items = Array.from(document.querySelectorAll('#galleryGrid [data-index]'));
+                    const lb = document.getElementById('lightbox');
+                    const lbImg = document.getElementById('lbImg');
+                    const prev = document.getElementById('lbPrev');
+                    const next = document.getElementById('lbNext');
+                    const closeBtn = document.getElementById('lbClose');
+                    let i = 0;
+
+                    function open(idx = 0) {
+                        i = Math.max(0, Math.min(idx, items.length - 1));
+                        lbImg.src = items[i].dataset.full;
+                        lb.classList.remove('hidden');
+                        lb.classList.add('flex');
+                        document.body.style.overflow = 'hidden'; // prevent page scroll
+                    }
+                    function close() {
+                        lb.classList.add('hidden');
+                        lb.classList.remove('flex');
+                        lbImg.src = '';
+                        document.body.style.overflow = ''; // restore scroll
+                    }
+                    function nav(dir) {
+                        i = (i + dir + items.length) % items.length;
+                        lbImg.src = items[i].dataset.full;
+                    }
+
+                    // expose an opener in case you want to call it elsewhere
+                    window.lbOpen = open;
+
+                    // open by clicking any tile
+                    items.forEach(btn => btn.addEventListener('click', () => open(+btn.dataset.index)));
+
+                    // controls
+                    closeBtn.addEventListener('click', close);
+                    prev.addEventListener('click', () => nav(-1));
+                    next.addEventListener('click', () => nav(1));
+                    lb.addEventListener('click', (e) => { if (e.target === lb) close(); });
+                    document.addEventListener('keydown', (e) => {
+                        if (lb.classList.contains('hidden')) return;
+                        if (e.key === 'Escape') close();
+                        if (e.key === 'ArrowLeft') nav(-1);
+                        if (e.key === 'ArrowRight') nav(1);
+                    });
+
+                    // make any "View Gallery" link open fullscreen at the featured image
+                    document.querySelectorAll('a[href="#gallery"]').forEach(a => {
+                        a.addEventListener('click', (e) => { e.preventDefault(); open(0); });
+                    });
+                })();
+            </script>
+        </section>
+
+        <section id="details" class="max-w-6xl mx-auto px-6 lg:px-12 py-16 border-t">
+            <h2 class="font-heading text-2xl mb-6">Property Details</h2>
+            <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 text-neutral-700">
+
+                <li class="flex items-center gap-4">
+                    <i data-lucide="ruler" class="text-neutral-500 w-6 h-6"></i>
+                    <div>
+                        <p class="text-lg font-semibold">1,250 m²</p>
+                        <p class="text-sm text-neutral-600">Total area</p>
+                    </div>
+                </li>
+
+                <li class="flex items-center gap-4">
+                    <i data-lucide="home" class="text-neutral-500 w-6 h-6"></i>
+                    <div>
+                        <p class="text-lg font-semibold">950 m²</p>
+                        <p class="text-sm text-neutral-600">Covered area</p>
+                    </div>
+                </li>
+
+                <li class="flex items-center gap-4">
+                    <i data-lucide="layout-grid" class="text-neutral-500 w-6 h-6"></i>
+                    <div>
+                        <p class="text-lg font-semibold">9</p>
+                        <p class="text-sm text-neutral-600">Rooms</p>
+                    </div>
+                </li>
+
+                <li class="flex items-center gap-4">
+                    <i data-lucide="shower-head" class="text-neutral-500 w-6 h-6"></i>
+                    <div>
+                        <p class="text-lg font-semibold">6</p>
+                        <p class="text-sm text-neutral-600">Bathrooms</p>
+                    </div>
+                </li>
+
+                <li class="flex items-center gap-4">
+                    <i data-lucide="car" class="text-neutral-500 w-6 h-6"></i>
+                    <div>
+                        <p class="text-lg font-semibold">5</p>
+                        <p class="text-sm text-neutral-600">Garage spaces</p>
+                    </div>
+                </li>
+
+                <li class="flex items-center gap-4">
+                    <i data-lucide="bed-double" class="text-neutral-500 w-6 h-6"></i>
+                    <div>
+                        <p class="text-lg font-semibold">5</p>
+                        <p class="text-sm text-neutral-600">Bedrooms</p>
+                    </div>
+                </li>
+
+                <li class="flex items-center gap-4">
+                    <i data-lucide="toilet" class="text-neutral-500 w-6 h-6"></i>
+                    <div>
+                        <p class="text-lg font-semibold">1</p>
+                        <p class="text-sm text-neutral-600">Guest toilet</p>
+                    </div>
+                </li>
+
+                <li class="flex items-center gap-4">
+                    <i data-lucide="clock" class="text-neutral-500 w-6 h-6"></i>
+                    <div>
+                        <p class="text-lg font-semibold">16</p>
+                        <p class="text-sm text-neutral-600">Years old</p>
+                    </div>
+                </li>
+
+                <li class="flex items-center gap-4">
+                    <i data-lucide="compass" class="text-neutral-500 w-6 h-6"></i>
+                    <div>
+                        <p class="text-lg font-semibold">Northeast</p>
+                        <p class="text-sm text-neutral-600">Orientation</p>
+                    </div>
+                </li>
+
+                <li class="flex items-center gap-4">
+                    <i data-lucide="sun" class="text-yellow-500 w-6 h-6"></i>
+                    <div>
+                        <p class="text-lg font-semibold">Very bright</p>
+                        <p class="text-sm text-neutral-600">Natural light</p>
+                    </div>
+                </li>
+
+            </ul>
+        </section>
+
+        <script src="https://unpkg.com/lucide@latest"></script>
+        <script>
+            lucide.createIcons();
+        </script>
+
+        <section id="map" class="max-w-6xl mx-auto px-6 lg:px-12 py-16 border-t">
+            <h2 class="font-heading text-2xl mb-4">Map</h2>
+            <div class="relative aspect-video rounded-xl overflow-hidden">
+                <!-- Map embed apuntando a Uriburu 1000, Boating Club San Isidro -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.268176922592!2d-58.49846912399843!3d-34.48258085234048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca5f7e02b1a25%3A0x3e0ab62cbd5b74b5!2sUriburu%201000%2C%20San%20Isidro%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1724012345678!5m2!1ses!2sar"
+                    class="w-full h-full border-0 focus:outline-none" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+
+                <!-- Dark overlay -->
+                <div class="absolute inset-0 bg-black/10 pointer-events-none"></div>
+            </div>
+        </section>
+
+        <style>
+            iframe:focus {
+                outline: none !important;
+            }
+        </style>
+
+        <!-- Overview Section (Read more/less con JS vanilla, texto intacto con negritas) -->
+        <section id="overview" class="max-w-6xl mx-auto px-6 lg:px-12 py-16 prose prose-neutral prose-lg">
+            <h2 class="text-2xl font-semibold mb-6">Overview</h2>
+
+            <!-- Intro siempre visible -->
+            <p><strong>Una Casa Excepcional</strong>, única por su <strong>Diseño</strong>, <strong>Calidad</strong>,
+                <strong>Escala</strong> y <strong>Ubicación</strong>. Ubicada en el exclusivo <strong>Boating Club de
+                    San
+                    Isidro</strong>, esta casa despliega <strong>950 m²</strong> distribuidos en tres plantas, sobre un
+                lote de
+                <strong>1.250 m²</strong>.
+            </p>
+
+            <p>Diseñada para quienes valoran la excelencia en cada detalle, ofrece <strong>cinco suites</strong>,
+                <strong>playroom</strong>, <strong>gimnasio</strong>, una imponente <strong>pileta de 26
+                    metros</strong>,
+                <strong>jardín parquizado</strong> y un <strong>muelle privado</strong>, el cual permite vivir el río
+                como una
+                extensión natural de la casa, una experiencia náutica reservada a unos pocos.
+            </p>
+
+            <!-- Resto del texto (intacto), oculto al inicio -->
+            <div id="overview-more" class="hidden whitespace-pre-line">
+                Fue concebida con una mirada integral, donde cada decisión, desde la elección de los materiales hasta el
+                diseño
+                de los espacios, refleja un compromiso profundo con la calidad, la funcionalidad y el disfrute
+                cotidiano.
+                Ambientes amplios, detalles constructivos de primer nivel y sectores recreativos pensados para compartir
+                en
+                familia.
+                En pocas palabras, <strong>Una casa con alma</strong>, pensada para disfrutar lo mejor de la vida.
+
+                <strong>Distribución de los ambientes:</strong>
+
+                <strong>Planta Baja:</strong>
+                • Hall de recepción con doble altura y escalera imperial
+                • Escritorio / sala de estar privada
+                • Gran living con chimenea y salida directa a la galería techada
+                • Comedor principal con ventanales al jardín
+                • Toilette de recepción
+                • Comedor diario con salida a galería cubierta con pérgola y sector de parrilla
+                • Cocina de diseño con isla central, lavadero, despensa y dependencia completa
+                • Jardín con riego por aspersión y muy privado
+                • <strong>Pileta de 26 metros</strong> de largo por 3.5 metro, con sector ensanchado, solarium y yacuzzi
+                integrado
+                • <strong>Muelle y amarra propia</strong> sobre el canal
+
+                <strong>Primer Piso:</strong>
+                • Master Suite con terraza privada con vista al canal, gran vestidor y baño compartimentado con
+                hidromasaje
+                • Dos dormitorios en semi suite, cada uno con vestidor y un hall distribuidor común. Uno de ellos con
+                terraza
+                propia al jardín y al muelle
+                • Dos dormitorios en suite, de excelentes dimensiones, ambos con vestidor y con baño completo
+                • Un escritorio bien ubicado y aislado de las suites, ideal para trabajar con privacidad
+                • Muy buena escalera secundaria, por la cual se accede a las tres plantas.
+
+                <strong>Segundo Piso:</strong>
+                • Gran Estar con bar / Playroom / Cine con Proyector / Sala de música
+                • Gimnasio con luz natural
+                • Baño toilette
+                • Sector independiente con dos dependencias de servicio y un baño completo, funciona como un mini
+                departamento
+
+                <strong>Detalles destacados:</strong>
+                • Aire acondicionado central, regulable por ambiente
+                • Calefacción por losa radiante
+                • Pisos de mármol
+                • Cocina con mesadas de Silestone, isla y artefactos de alta gama
+                • Baños revestidos en mármol y porcelanato
+                • Carpinterías doble vidrio
+                • Techos altos, excelente altura interior y circulación de luz natural
+                • Excelente calidad constructiva en cada detalle
+
+                <strong>Sobre el Boating Club:</strong>
+                • Barrio privado de categoría con salida náutica al Río Luján
+                • Seguridad 24hs. y con control de acceso
+                • Restaurante
+                • Amarras
+                • Cancha de tenis
+                • Pileta
+                • GYM
+                • Salón de usos múltiples
+                • Espacios verdes y ambiente familiar
+
+                <strong>Ubicación estratégica:</strong>
+                • Rápido acceso a Av. del Libertador y Panamericana
+                • Cerca de los mejores colegios bilingües de Zona Norte
+                • A pocos minutos de centros comerciales, supermercados y polo gastronómico
+
+                <strong>Una propiedad ÚNICA</strong>, con alma, pensada para quien busca vivir en grande, con libertad,
+                diseño y
+                naturaleza, sin resignar confort ni accesos.
+                Ideal para quienes valoran la elegancia, el espacio, el agua… y la calidad de vida.
+
+                Contactanos para agendar una visita privada.
+            </div>
+
+            <!-- Toggle -->
+            <button id="overview-toggle"
+                class="not-prose mt-4 inline-flex items-center gap-2 text-sm font-medium text-neutral-700 hover:text-neutral-900 underline"
+                aria-expanded="false" aria-controls="overview-more">
+                Leer más
+            </button>
+        </section>
+
+        <script>
+            // Toggle read more/less sin dependencias
+            (function () {
+                const btn = document.getElementById('overview-toggle');
+                const more = document.getElementById('overview-more');
+                if (!btn || !more) return;
+
+                function setState(expanded) {
+                    btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+                    btn.textContent = expanded ? 'Leer menos' : 'Leer más';
+                    more.classList.toggle('hidden', !expanded);
+                }
+
+                btn.addEventListener('click', () => {
+                    const expanded = btn.getAttribute('aria-expanded') === 'true';
+                    setState(!expanded);
+                });
+
+                // Estado inicial (oculto)
+                setState(false);
+            })();
+        </script>
+
+
+    </main>
+
+    <footer class="bg-neutral-950 text-white/80">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 py-12">© RJ</div>
+    </footer>
+
+    <!-- Floating WhatsApp button
+    <a href="https://wa.me/5491112345678?text=I'd%20like%20to%20schedule%20an%20appointment%20to%20Rodrigo%20Jordan"
+        target="_blank"
+        class="fixed bottom-6 right-6 flex items-center justify-center gap-2 rounded-full bg-green-600 p-4 text-white shadow-lg hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 z-50">
+        <i data-lucide="message-circle" class="w-6 h-6"></i>
+    </a>
+
+    <!-- Lucide icons script -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script> -->
+</body>
+
+</html>
