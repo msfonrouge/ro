@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <!-- optional but nice on Android’s address bar color -->
     <meta name="theme-color" content="#0b0b0b">
-    <title>Uriburu 1000 – Boating, San Isidro, Buenos Aires</title>
+    <title>Uriburu 1000, Boating Club, San Isidro, Buenos Aires</title>
     <meta name="description"
-        content="Uriburu 1000 – 5 bedrooms, 6 bathrooms, 1,250 m² total area in San Isidro. Schedule a visit.">
+        content="Uriburu 1000 – 5 bedrooms, 6 bathrooms, 1,250 m² total area in Boating Club, San Isidro. Schedule a visit.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <meta property="og:title" content="Uriburu 1000 – Boating, San Isidro, Buenos Aires">
+    <meta property="og:title" content="Uriburu 1000, Boating Club, San Isidro, Buenos Aires">
     <meta property="og:description" content="Luxury property with 5 bedrooms, 6 bathrooms and 1,250 m² total area.">
     <meta property="og:image"
         content="https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169640.jpg">
@@ -91,62 +91,10 @@
         </div>
     </nav>
 
-    <script>
-        // Mobile accordion toggle (no scroll lock, no auto-close on outside taps)
-        (function () {
-            const btn = document.getElementById('navToggle');
-            const panel = document.getElementById('navLinks');
 
-            function setOpen(open) {
-                btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-                panel.style.maxHeight = open ? panel.scrollHeight + 'px' : '0px';
-            }
-
-            btn?.addEventListener('click', () => {
-                const open = panel.style.maxHeight && panel.style.maxHeight !== '0px';
-                setOpen(!open);
-            });
-
-            // Close after clicking a link (optional)
-            panel.querySelectorAll('a.navlink').forEach(a => a.addEventListener('click', () => setOpen(false)));
-
-            // Ensure closed on load
-            setOpen(false);
-        })();
-
-        // Keep nav light on scroll (just a tiny change, no dark overlay)
-        (function () {
-            const nav = document.getElementById('mainNav');
-            const add = ['bg-[rgba(12,12,12,0.28)]', 'supports-[backdrop-filter]:bg-[rgba(12,12,12,0.18)]', 'border-white/10'];
-            const remove = ['bg-[rgba(12,12,12,0.22)]', 'supports-[backdrop-filter]:bg-[rgba(12,12,12,0.14)]', 'border-white/10'];
-
-            function onScroll() {
-                if (window.scrollY > 10) nav.classList.add(...add);
-                else nav.classList.remove(...add);
-            }
-            onScroll();
-            window.addEventListener('scroll', onScroll, { passive: true });
-        })();
-
-        // Active section underline + color
-        (function () {
-            const links = Array.from(document.querySelectorAll('a.navlink[href^="#"]'));
-            const sections = links.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
-            const io = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    const id = '#' + entry.target.id;
-                    const link = links.find(a => a.getAttribute('href') === id);
-                    if (!link) return;
-                    if (entry.isIntersecting) { link.classList.add('text-white', 'after:w-full'); link.classList.remove('text-white/80'); }
-                    else { link.classList.remove('text-white', 'after:w-full'); link.classList.add('text-white/80'); }
-                });
-            }, { rootMargin: '-30% 0px -60% 0px' });
-            sections.forEach(sec => io.observe(sec));
-        })();
-    </script>
 
     <!-- HERO -->
-    <header class="relative h-screen flex items-end">
+    <header class="relative min-h-[100svh] flex items-end">
         <div class="absolute inset-0 bg-cover bg-center"
             style="background-image:url('https://imgar.zonapropcdn.com/avisos/resize/1/00/56/78/20/20/1200x1200/1990169640.jpg');"
             aria-hidden="true"></div>
@@ -156,10 +104,10 @@
             <div class="max-w-6xl mx-auto text-center">
                 <p class="uppercase tracking-[0.35em] text-[11px] md:text-xs text-white/80 mb-3">Fine Real Estate</p>
                 <h1 class="font-heading text-4xl sm:text-6xl lg:text-7xl leading-tight">Uriburu 1000</h1>
-                <p class="mt-3 text-white/90">Boating, San Isidro, Buenos Aires</p>
+                <p class="mt-3 text-white/90">Boating Club, San Isidro, Buenos Aires</p>
 
-                <div class="mt-8 flex flex-wrap justify-center gap-3">
-                    <a href="https://wa.me/5491112345678?text=I'd%20like%20to%20schedule%20an%20appointment%20to%20Rodrigo%20Jordan"
+                <div class="mt-8 flex flex-wrap justify-center gap-3 mb-8">
+                    <a href="https://wa.me/5491154731791?text=I%20would%20like%20to%20schedule%20a%20visit%20to%20Uriburu%201000,%20Boating%20Club,%20San Isidro,%20Buenos Aires"
                         class="inline-flex items-center justify-center rounded-full px-7 py-3 text-sm font-medium bg-white text-neutral-900 hover:bg-neutral-200 transition"
                         target="_blank">
                         Schedule a Visit</a>
@@ -173,7 +121,7 @@
                     </button>
                 </div>
 
-                <div class="mt-10 flex flex-wrap justify-center gap-5 text-sm text-white/90">
+                <div class="mt-10 hidden md:flex flex-wrap justify-center gap-5 text-sm text-white/90">
                     <a class="hover:opacity-100 opacity-90" href="#gallery">Gallery</a>
                     <a class="hover:opacity-100 opacity-90" href="#map">Map</a>
                     <a class="hover:opacity-100 opacity-90" href="#details">Property Details</a>
@@ -191,39 +139,39 @@
             <iframe id="videoFrame" class="w-full h-full rounded-lg" src="" title="Property Video Tour" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
-            <button onclick="closeVideo()" class="absolute -top-12 right-0 text-white text-2xl">✕</button>
+            <button onclick="closeVideo()" class="absolute -top-12 right-0 text-white text-5xl">✕</button>
         </div>
     </div>
-
-    <script>
-        const videoModal = document.getElementById('videoModal');
-        const videoFrame = document.getElementById('videoFrame');
-        const videoBtn = document.querySelector('button[onclick="openVideo()"]');
-
-        function openVideo() {
-            videoModal.classList.remove('hidden');
-            videoModal.classList.add('flex');
-            const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            const base = 'https://www.youtube.com/embed/ScMzIvxBSi4';
-            videoFrame.src = prefersReduced ? base : base + '?autoplay=1';
-            setTimeout(() => videoModal.querySelector('button').focus(), 0);
-        }
-        function closeVideo() {
-            videoModal.classList.add('hidden');
-            videoModal.classList.remove('flex');
-            videoFrame.src = '';
-            videoBtn?.focus();
-        }
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && !videoModal.classList.contains('hidden')) closeVideo();
-        });
-    </script>
 
     <!-- Content sections -->
     <main class="bg-white text-neutral-900 flex-grow">
 
+        <section id="price" class="py-16">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="rounded-2xl bg-white ring-1 ring-black/5 shadow-sm px-6 py-5">
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
+                        <!-- Sale -->
+                        <div class="text-center">
+                            <div class="text-[11px] uppercase tracking-[0.18em] text-neutral-500">Sale Price</div>
+                            <div class="mt-1 font-heading text-3xl sm:text-4xl text-neutral-900">USD 6.500.000</div>
+                        </div>
+
+                        <!-- Divider -->
+                        <div class="hidden sm:block h-10 w-px bg-neutral-200"></div>
+
+                        <!-- Rent -->
+                        <div class="text-center">
+                            <div class="text-[11px] uppercase tracking-[0.18em] text-neutral-500">Rent Price</div>
+                            <div class="mt-1 font-heading text-3xl sm:text-4xl text-neutral-900">USD 5.500 <span
+                                    class="text-neutral-500 text-xl align-middle">/ month</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Gallery (responsive grid + featured tile + lightbox) -->
-        <section id="gallery" class="max-w-6xl mx-auto px-6 lg:px-12 py-16 border-t">
+        <section id="gallery" class="max-w-6xl mx-auto px-6 lg:px-12 pb-16">
             <h2 class="font-heading text-2xl mb-6">Gallery</h2>
 
             <!-- Grid -->
@@ -247,13 +195,6 @@
                         class="pointer-events-none absolute bottom-3 left-3 text-[11px] font-medium px-2 py-1 rounded-full bg-black/50 text-white inline-flex items-center gap-1.5">50<i
                             data-lucide="camera" class="w-3.5 h-3.5 text-white/90" aria-hidden="true"></i></span>
                 </button>
-
-                <script src="https://unpkg.com/lucide@latest"></script>
-                <script>
-                    // ensure all icons on the page (including gallery) are present first
-                    window.addEventListener('load', () => lucide.createIcons());
-                    // If you already called it earlier, calling again is safe.
-                </script>
 
                 <!-- Regular tiles -->
                 <button
@@ -703,71 +644,33 @@
 
             <!-- Lightbox -->
             <div id="lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 p-4">
-                <button id="lbClose" class="absolute top-4 right-4 text-white/90 hover:text-white text-2xl"
-                    aria-label="Close">✕</button>
-                <button id="lbPrev"
-                    class="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 text-white/90 hover:text-white text-3xl"
-                    aria-label="Previous">‹</button>
-                <button id="lbNext"
-                    class="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 text-white/90 hover:text-white text-3xl"
-                    aria-label="Next">›</button>
+                <!-- Close -->
+                <button id="lbClose" class="z-[100] absolute top-4 right-4 text-white/90 hover:text-white text-5xl leading-none
+                         focus:outline-none focus:ring-2 focus:ring-white/50" aria-label="Close">✕</button>
+
+                <!-- Prev (big hit area) -->
+                <button id="lbPrev" type="button" class="group absolute inset-y-0 left-0 w-1/3 md:w-24 flex items-center justify-start
+                         pl-2 md:pl-4 z-[60] select-none focus:outline-none focus:ring-2 focus:ring-white/40">
+                    <span aria-hidden="true" class="pointer-events-none rounded-full bg-black/35 backdrop-blur px-3 py-2
+                         text-4xl md:text-5xl text-white/85 group-hover:text-white group-active:scale-95">‹</span>
+                </button>
+
+                <!-- Next (big hit area) -->
+                <button id="lbNext" type="button" class="group absolute inset-y-0 right-0 w-1/3 md:w-24 flex items-center justify-end
+                         pr-2 md:pr-4 z-[60] select-none focus:outline-none focus:ring-2 focus:ring-white/40">
+                    <span aria-hidden="true" class="pointer-events-none rounded-full bg-black/35 backdrop-blur px-3 py-2
+                         text-4xl md:text-5xl text-white/85 group-hover:text-white group-active:scale-95">›</span>
+                </button>
+
+                <!-- Optional swipe hints -->
+                <div class="pointer-events-none absolute inset-y-0 left-0 w-16 md:w-24
+                      bg-gradient-to-r from-black/20 to-transparent rounded-l-lg"></div>
+                <div class="pointer-events-none absolute inset-y-0 right-0 w-16 md:w-24
+                      bg-gradient-to-l from-black/20 to-transparent rounded-r-lg"></div>
+
                 <img id="lbImg" src="" alt="Full-size image"
-                    class="max-h-[85vh] max-w-[92vw] rounded-lg shadow-2xl object-contain">
+                    class="max-h-[85vh] max-w-[92vw] rounded-lg shadow-2xl object-contain" />
             </div>
-
-            <!-- Lightbox script (no deps) -->
-            <script>
-                (function () {
-                    const items = Array.from(document.querySelectorAll('#galleryGrid [data-index]'));
-                    const lb = document.getElementById('lightbox');
-                    const lbImg = document.getElementById('lbImg');
-                    const prev = document.getElementById('lbPrev');
-                    const next = document.getElementById('lbNext');
-                    const closeBtn = document.getElementById('lbClose');
-                    let i = 0;
-
-                    function open(idx = 0) {
-                        i = Math.max(0, Math.min(idx, items.length - 1));
-                        lbImg.src = items[i].dataset.full;
-                        lb.classList.remove('hidden');
-                        lb.classList.add('flex');
-                        document.body.style.overflow = 'hidden'; // prevent page scroll
-                    }
-                    function close() {
-                        lb.classList.add('hidden');
-                        lb.classList.remove('flex');
-                        lbImg.src = '';
-                        document.body.style.overflow = ''; // restore scroll
-                    }
-                    function nav(dir) {
-                        i = (i + dir + items.length) % items.length;
-                        lbImg.src = items[i].dataset.full;
-                    }
-
-                    // expose an opener in case you want to call it elsewhere
-                    window.lbOpen = open;
-
-                    // open by clicking any tile
-                    items.forEach(btn => btn.addEventListener('click', () => open(+btn.dataset.index)));
-
-                    // controls
-                    closeBtn.addEventListener('click', close);
-                    prev.addEventListener('click', () => nav(-1));
-                    next.addEventListener('click', () => nav(1));
-                    lb.addEventListener('click', (e) => { if (e.target === lb) close(); });
-                    document.addEventListener('keydown', (e) => {
-                        if (lb.classList.contains('hidden')) return;
-                        if (e.key === 'Escape') close();
-                        if (e.key === 'ArrowLeft') nav(-1);
-                        if (e.key === 'ArrowRight') nav(1);
-                    });
-
-                    // make any "View Gallery" link open fullscreen at the featured image
-                    document.querySelectorAll('a[href="#gallery"]').forEach(a => {
-                        a.addEventListener('click', (e) => { e.preventDefault(); open(0); });
-                    });
-                })();
-            </script>
         </section>
 
         <section id="details" class="max-w-6xl mx-auto px-6 lg:px-12 py-16 border-t">
@@ -857,10 +760,6 @@
             </ul>
         </section>
 
-        <script src="https://unpkg.com/lucide@latest"></script>
-        <script>
-            lucide.createIcons();
-        </script>
 
         <section id="map" class="max-w-6xl mx-auto px-6 lg:px-12 py-16 border-t">
             <h2 class="font-heading text-2xl mb-4">Map</h2>
@@ -868,7 +767,7 @@
                 <!-- Map embed apuntando a Uriburu 1000, Boating Club San Isidro -->
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.268176922592!2d-58.49846912399843!3d-34.48258085234048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca5f7e02b1a25%3A0x3e0ab62cbd5b74b5!2sUriburu%201000%2C%20San%20Isidro%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1724012345678!5m2!1ses!2sar"
-                    class="w-full h-full border-0 focus:outline-none" allowfullscreen="" loading="lazy"
+                    class="w-full h-full border-0 focus:outline-none" allowfullscreen=""
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
 
@@ -990,47 +889,38 @@
         </section>
 
         <script>
-            // Toggle read more/less sin dependencias
-            (function () {
-                const btn = document.getElementById('overview-toggle');
-                const more = document.getElementById('overview-more');
-                if (!btn || !more) return;
 
-                function setState(expanded) {
-                    btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
-                    btn.textContent = expanded ? 'Leer menos' : 'Leer más';
-                    more.classList.toggle('hidden', !expanded);
-                }
-
-                btn.addEventListener('click', () => {
-                    const expanded = btn.getAttribute('aria-expanded') === 'true';
-                    setState(!expanded);
-                });
-
-                // Estado inicial (oculto)
-                setState(false);
-            })();
         </script>
 
 
     </main>
 
+
     <footer class="bg-neutral-950 text-white/80">
-        <div class="max-w-7xl mx-auto px-6 lg:px-12 py-12">© RJ</div>
+        <diva
+            class="max-w-7xl mx-auto px-6 lg:px-12 py-12 text-sm flex flex-col sm:flex-row justify-between items-center">
+            <span>
+                © <span id="year"></span> Rodrigo Jordan
+            </span>
+            <span class="mt-2 sm:mt-0">
+                Developed by <a href="https://github.com/msfonrouge" class="hover:text-white">msfonrouge</a>
+            </span>
+        </div>
     </footer>
 
-    <!-- Floating WhatsApp button
-    <a href="https://wa.me/5491112345678?text=I'd%20like%20to%20schedule%20an%20appointment%20to%20Rodrigo%20Jordan"
-        target="_blank"
-        class="fixed bottom-6 right-6 flex items-center justify-center gap-2 rounded-full bg-green-600 p-4 text-white shadow-lg hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 z-50">
-        <i data-lucide="message-circle" class="w-6 h-6"></i>
-    </a>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 
-    <!-- Lucide icons script -->
+
+    <script src="mobile.js"></script>
+    <script src="gallery.js"></script>
+    <script src="video.js"></script>
+    <script src="read-more.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
-        lucide.createIcons();
-    </script> -->
+        window.addEventListener('load', () => lucide.createIcons());
+    </script>
 </body>
 
 </html>
