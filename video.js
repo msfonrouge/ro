@@ -8,7 +8,7 @@ function openVideo() {
   const prefersReduced = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
   ).matches;
-  const base = "https://www.youtube.com/embed/XVlIEBVhBRU";
+  const base = "https://www.youtube.com/embed/9wwh_6eA33M";
   videoFrame.src = prefersReduced ? base : base + "?autoplay=1";
   setTimeout(() => videoModal.querySelector("button").focus(), 0);
 }
